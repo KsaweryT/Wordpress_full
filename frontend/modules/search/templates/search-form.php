@@ -144,8 +144,6 @@ $html = '<form class="clearfix search-providers" method="get" action="'.home_url
   $html .= '<div class="'.$fieldclass.'">
     <div class="category-select">
       <select id="categorysrh" name="catid" class="form-control sf-form-control sf-select-box" title="'.esc_html__('Kategoria', 'service-finder').'" data-live-search="true" data-header="'.esc_html__('Wybierz kategorię', 'service-finder').'">
-        <option value="">
-        '.esc_html__('Wybierz kategorię', 'service-finder').'
         </option>';
         
 		if(class_exists('service_finder_texonomy_plugin')){
