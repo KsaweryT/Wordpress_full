@@ -3303,7 +3303,7 @@ $paypal = new Paypal($paypalCreds,$paypalTypeBool);
 						
 						try {
 						$parameters = array(
-							//Enter the account’s identifier here
+							//Enter the accountï¿½s identifier here
 							PayUParameters::ACCOUNT_ID => $payulatamaccountid,
 							// Enter the reference code here.
 							PayUParameters::REFERENCE_CODE => $reference,
@@ -4290,7 +4290,7 @@ if(email_exists( esc_attr($arg['signup_user_email']) )){
 	$fullname = $arg['signup_first_name'].' '.$arg['signup_last_name'];
 	//$userId = wp_create_user( esc_attr($sanitized_user_name), esc_attr($arg['signup_password']), esc_attr($arg['signup_user_email']) );
 	$userdata = array(
-		'user_login'  =>  $sanitized_user_name,
+		'user_login'  =>  $arg['signup_phone'],
 		'user_pass'   =>  $arg['signup_password'],
 		'user_email'  =>  $arg['signup_user_email'],
 		'user_nicename'  =>  service_finder_create_user_name($fullname),
