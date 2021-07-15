@@ -672,21 +672,21 @@ jQuery(function() {
                 validating: 'glyphicon glyphicon-refresh'
             },
             fields: {
-				signup_user_name: {
-					validators: {
-						notEmpty: {
-							message: param.signup_user_name
-						},
-						remote: {
-							type: 'POST',
-							url: ajaxurl,
-							data: {
-								action: 'signupvalidate'
-							},
-							message: param.username_exist
-						}
-					}
-				},
+				// signup_user_name: {
+				// 	validators: {
+				// 		notEmpty: {
+				// 			message: param.signup_user_name
+				// 		},
+				// 		remote: {
+				// 			type: 'POST',
+				// 			url: ajaxurl,
+				// 			data: {
+				// 				action: 'signupvalidate'
+				// 			},
+				// 			message: param.username_exist
+				// 		}
+				// 	}
+				// },
 				signup_phone: {
 					validators: {
 						digits: {message: param.only_digits},
@@ -1456,21 +1456,21 @@ jQuery(function() {
                 validating: 'glyphicon glyphicon-refresh'
             },
             fields: {
-				signup_user_name: {
-					validators: {
-						notEmpty: {
-							message: param.signup_user_name
-						},
-						remote: {
-							type: 'POST',
-							url: ajaxurl,
-							data: {
-								action: 'signupvalidate'
-							},
-							message: param.username_exist
-						}
-					}
-				},
+				// signup_user_name: {
+				// 	validators: {
+				// 		notEmpty: {
+				// 			message: param.signup_user_name
+				// 		},
+				// 		remote: {
+				// 			type: 'POST',
+				// 			url: ajaxurl,
+				// 			data: {
+				// 				action: 'signupvalidate'
+				// 			},
+				// 			message: param.username_exist
+				// 		}
+				// 	}
+				// },
 				signup_first_name: {
 					validators: {
 						notEmpty: {
