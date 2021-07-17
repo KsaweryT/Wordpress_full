@@ -106,7 +106,7 @@ $socialloginclass = 'sf-other-login-one';
             <div class="col-md-12">
               <div class="form-group">
                 <div class="input-group"> <i class="input-group-addon fa fa-user"></i>
-                  <input type="text" class="form-control" name="login_phone" id="login_phone" placeholder="<?php esc_html_e('Nr telefonu', 'service-finder'); ?>">
+                  <input name="login_user_name" type="text" class="form-control" placeholder="<?php esc_html_e('Nazwa użytkownika', 'service-finder'); ?>">
                 </div>
               </div>
             </div>
@@ -190,6 +190,11 @@ $socialloginclass = 'sf-other-login-one';
                   <div class="col-md-6">
                     <div class="form-group">
                       <input name="signup_last_name" type="text" class="form-control" placeholder="<?php esc_html_e('Nazwisko', 'service-finder'); ?>">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input name="signup_user_name" type="text" class="form-control" placeholder="<?php esc_html_e('Nazwa użytkownika', 'service-finder'); ?>">
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -721,6 +726,11 @@ $socialloginclass = 'sf-other-login-one';
                   <div class="col-md-6">
                     <div class="form-group">
                       <input name="signup_last_name" type="text" class="form-control" placeholder="<?php esc_html_e('Nazwisko', 'service-finder'); ?>">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input name="signup_user_name" type="text" class="form-control" placeholder="<?php esc_html_e('Nazwa użytkownika', 'service-finder'); ?>">
                     </div>
                   </div>
                   <div class="col-md-6">

@@ -4275,13 +4275,13 @@ if(email_exists( esc_attr($arg['signup_user_email']) )){
 	
 	// Check the username
 
-	// if ( ! validate_username( $arg['signup_user_name'] ) ) {
+	if ( ! validate_username( $arg['signup_user_name'] ) ) {
 
-	// 	$service_finder_Errors->add( 'invalid_username', esc_html__( 'ERROR: This username is invalid because it uses illegal characters. Please enter a valid username.' , 'service-finder') );
+		$service_finder_Errors->add( 'invalid_username', esc_html__( 'ERROR: This username is invalid because it uses illegal characters. Please enter a valid username.' , 'service-finder') );
 
-	// 	return $service_finder_Errors;
+		return $service_finder_Errors;
 
-	// }
+	}
 
 	
 	$sanitized_user_name = sanitize_user( $arg['signup_user_name'] );
@@ -4290,7 +4290,7 @@ if(email_exists( esc_attr($arg['signup_user_email']) )){
 	$fullname = $arg['signup_first_name'].' '.$arg['signup_last_name'];
 	//$userId = wp_create_user( esc_attr($sanitized_user_name), esc_attr($arg['signup_password']), esc_attr($arg['signup_user_email']) );
 	$userdata = array(
-		'user_login'  =>  $arg['signup_phone'],
+		'user_login'  =>  $sanitized_user_name,
 		'user_pass'   =>  $arg['signup_password'],
 		'user_email'  =>  $arg['signup_user_email'],
 		'user_nicename'  =>  service_finder_create_user_name($fullname),

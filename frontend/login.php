@@ -54,8 +54,8 @@ var formtype = "login"; var selectedpackage;', 'after' );
               <div class="form-group">
 
                 <div class="input-group"> <i class="input-group-addon fa fa-user"></i>
-
-                  <input name="login_user_name" type="text" class="form-control" placeholder="'.esc_html__('Nazwa użytkownika', 'service-finder').'">
+                  <input type="text" class="form-control" name="signup_phone" id="signup_phone" placeholder="'.esc_html__('Numer telefonu', 'service-finder').'">
+                  // <input name="login_user_name" type="text" class="form-control" placeholder="'.esc_html__('Nazwa użytkownika', 'service-finder').'">
 
                 </div>
 

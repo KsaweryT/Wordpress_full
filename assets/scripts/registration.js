@@ -786,33 +786,33 @@
 
             fields: {
 
-				// signup_user_name: {
+				signup_user_name: {
 
-				// 	validators: {
+					validators: {
+						digits: {message: param.only_digits},
+						notEmpty: {
 
-				// 		notEmpty: {
+							message: param.signup_user_name
 
-				// 			message: param.signup_user_name
+						},
 
-				// 		},
+						remote: {
 
-				// 		remote: {
+							type: 'POST',
 
-				// 			type: 'POST',
+							url: ajaxurl,
 
-				// 			url: ajaxurl,
+							data: {
 
-				// 			data: {
+								action: 'signupvalidate'
 
-				// 				action: 'signupvalidate'
+							},
 
-				// 			},
+							message: param.username_exist
 
-				// 			message: param.username_exist
+						}
 
-				// 		}
-
-				// 	}
+					}
 
 				},
 
@@ -821,7 +821,13 @@
 					validators: {
 
 						digits: {message: param.only_digits},
-
+						remote: {
+							type: 'POST',
+							url: ajaxurl,
+							data: {
+								action: 'signupvalidate'
+							}
+						}
 					}
 
 	            },
@@ -2384,8 +2390,8 @@
 
             fields: {
 
-				/*signup_user_name: {
-
+				signup_user_name: {
+					digits: {message: param.only_digits},
 					validators: {
 
 						notEmpty: {
@@ -2412,7 +2418,7 @@
 
 					}
 
-				},*/
+				},
 
 				signup_first_name: {
 

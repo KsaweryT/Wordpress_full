@@ -10402,7 +10402,7 @@ function service_finder_signupvalidate(){
 global $wpdb, $service_finder_Tables;
 extract($_POST);
 
-/*if(!empty($signup_user_name))
+if(!empty($signup_user_name))
 {
 	if(username_exists($signup_user_name)){
 		$valid = false;
@@ -10410,7 +10410,7 @@ extract($_POST);
 		$valid = true;
 	}
 }
-*/
+
 
 if(!empty($signup_user_email))
 {
