@@ -2788,7 +2788,7 @@ setDefaults({
 	allDaySlot: true,
 	allDayText: 'all-day',
 	firstHour: 6,
-	slotMinutes: 30,
+	slotMinutes: 60,
 	defaultEventMinutes: 120,
 	axisFormat: 'h(:mm)tt',
 	timeFormat: {

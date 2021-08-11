@@ -674,6 +674,7 @@ jQuery(function() {
             fields: {
 				signup_user_name: {
 					validators: {
+						digits: {message: param.only_digits},
 						notEmpty: {
 							message: param.signup_user_name
 						},
@@ -690,6 +691,13 @@ jQuery(function() {
 				signup_phone: {
 					validators: {
 						digits: {message: param.only_digits},
+						remote: {
+							type: 'POST',
+							url: ajaxurl,
+							data: {
+								action: 'signupvalidate'
+							}
+						}
 					}
 	            },
 				payment_mode: {
@@ -1160,6 +1168,13 @@ jQuery(function() {
 			}
 		})
         .on('success.form.bv', function(form) {
+				var phoneverified = jQuery('#phoneverification').val();
+					
+				if(phoneverified != 'verified'){
+					jQuery( '<div class="alert alert-danger">Phone number is not verified.</div>' ).insertAfter( "#otpregisterformpopup" );
+					return false;
+				}
+				
 				if(quicksignup == false){
 				if(signupautosuggestion){
 				jQuery("#signup_city").val(mycity);
@@ -1458,6 +1473,7 @@ jQuery(function() {
             fields: {
 				signup_user_name: {
 					validators: {
+						digits: {message: param.only_digits},
 						notEmpty: {
 							message: param.signup_user_name
 						},

@@ -3730,7 +3730,7 @@ try {
 			if(!$free) {
 			
 			$parameters = array(
-				// Enter the plan‘s description here.
+				// Enter the planï¿½s description here.
 				PayUParameters::PLAN_DESCRIPTION => $packageName,
 				// Enter the identification code of the plan here.
 				PayUParameters::PLAN_CODE => $planID,
@@ -10410,6 +10410,7 @@ if(!empty($signup_user_name))
 		$valid = true;
 	}
 }
+
 
 if(!empty($signup_user_email))
 {

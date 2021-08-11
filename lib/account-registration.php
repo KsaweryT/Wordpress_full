@@ -3303,7 +3303,7 @@ $paypal = new Paypal($paypalCreds,$paypalTypeBool);
 						
 						try {
 						$parameters = array(
-							//Enter the account’s identifier here
+							//Enter the accountï¿½s identifier here
 							PayUParameters::ACCOUNT_ID => $payulatamaccountid,
 							// Enter the reference code here.
 							PayUParameters::REFERENCE_CODE => $reference,
@@ -4275,13 +4275,13 @@ if(email_exists( esc_attr($arg['signup_user_email']) )){
 	
 	// Check the username
 
-	if ( ! validate_username( $arg['signup_user_name'] ) ) {
+	// if ( ! validate_username( $arg['signup_user_name'] ) ) {
 
-		$service_finder_Errors->add( 'invalid_username', esc_html__( 'ERROR: This username is invalid because it uses illegal characters. Please enter a valid username.' , 'service-finder') );
+		// $service_finder_Errors->add( 'invalid_username', esc_html__( 'ERROR: This username is invalid because it uses illegal characters. Please enter a valid username.' , 'service-finder') );
 
-		return $service_finder_Errors;
+		// return $service_finder_Errors;
 
-	}
+	// }
 
 	
 	$sanitized_user_name = sanitize_user( $arg['signup_user_name'] );

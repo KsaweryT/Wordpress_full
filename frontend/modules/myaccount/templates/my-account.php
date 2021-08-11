@@ -284,7 +284,7 @@ wp_enqueue_script('service-finder-crop');
     </div>
     <div class="panel-body sf-panel-body padding-30">
       <div class="row">
-        <div class="col-lg-12">
+        <!-- <div class="col-lg-12">
           <div class="form-group">
             <label>
             <?php esc_html_e('Username', 'service-finder'); ?>
@@ -293,8 +293,8 @@ wp_enqueue_script('service-finder-crop');
               <input type="text" class="form-control sf-form-control" readonly="readonly" name="username" value="<?php echo esc_attr($userInfo['username']) ?>">
             </div>
           </div>
-        </div>
-        <div class="col-lg-12">
+        </div> -->
+        <!-- <div class="col-lg-12">
           <div class="form-group">
             <label>
             <?php esc_html_e('Company Name', 'service-finder'); ?>
@@ -303,7 +303,7 @@ wp_enqueue_script('service-finder-crop');
               <input type="text" class="form-control sf-form-control" name="company_name" value="<?php echo esc_attr($userInfo['company_name']) ?>">
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="col-lg-6">
           <div class="form-group">
             <label>
@@ -344,7 +344,7 @@ wp_enqueue_script('service-finder-crop');
             </div>
           </div>
         </div>
-        <div class="col-lg-12">
+        <!-- <div class="col-lg-12">
           <div class="form-group">
             <label>
             <?php esc_html_e('TagLine', 'service-finder'); ?>
@@ -353,8 +353,8 @@ wp_enqueue_script('service-finder-crop');
               <input name="tagline" type="text" class="form-control sf-form-control" value="<?php echo esc_attr($userInfo['tagline']) ?>">
             </div>
           </div>
-        </div>
-        <div class="col-lg-12">
+        </div> -->
+        <!-- <div class="col-lg-12">
           <div class="form-group">
             <label>
             <?php esc_html_e('Biography', 'service-finder'); ?>
@@ -368,12 +368,12 @@ wp_enqueue_script('service-finder-crop');
               wp_editor( wp_unslash($userInfo['bio']), 'bio', $settings );
               ?>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
   <!--Contact Details Section-->
-  <div class="panel panel-default contact-details">
+  <!-- <div class="panel panel-default contact-details">
     <div class="panel-heading sf-panel-heading">
       <h3 class="panel-tittle m-a0"><span class="fa fa-envelope"></span> <?php esc_html_e('Contact Detail', 'service-finder'); ?> </h3>
     </div>
@@ -430,7 +430,7 @@ wp_enqueue_script('service-finder-crop');
               <input type="text" class="form-control sf-form-control" name="skypeid" value="<?php echo esc_attr($userInfo['skypeid']) ?>">
             </div>
           </div>
-        </div>
+        </div> 
         <div class="col-lg-6">
           <div class="form-group">
             <label>
@@ -443,7 +443,7 @@ wp_enqueue_script('service-finder-crop');
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!--Address Section-->
   <div class="panel panel-default address-here">
     <div class="panel-heading sf-panel-heading">
@@ -478,7 +478,7 @@ wp_enqueue_script('service-finder-crop');
         <div class="col-lg-6">
           <div class="form-group">
             <label>
-            <?php esc_html_e('Address', 'service-finder'); ?>
+            <?php esc_html_e('Adres', 'service-finder'); ?>
             </label>
             <div class="input-group"> <i class="input-group-addon fixed-w fa fa-globe"></i>
               <input type="text" class="form-control sf-form-control" placeholder="<?php esc_html_e('Please enter only address', 'service-finder'); ?>" name="address" id="address" value="<?php echo esc_attr(stripcslashes($userInfo['address'])) ?>">
@@ -488,7 +488,7 @@ wp_enqueue_script('service-finder-crop');
         <div class="col-lg-6">
           <div class="form-group">
             <label>
-            <?php esc_html_e('Apt/Suite #', 'service-finder'); ?>
+            <?php esc_html_e('Nr domu/mieszkania', 'service-finder'); ?>
             </label>
             <div class="input-group"> <i class="input-group-addon fixed-w fa fa-map-marker"></i>
               <input type="text" class="form-control sf-form-control" name="apt" id="apt" value="<?php echo esc_attr($userInfo['apt']) ?>">
@@ -498,7 +498,7 @@ wp_enqueue_script('service-finder-crop');
         <div class="col-lg-6">
           <div class="form-group city-outer-bx">
             <label>
-            <?php esc_html_e('City', 'service-finder'); ?>
+            <?php esc_html_e('Miasto', 'service-finder'); ?>
             </label>
             <div class="input-group" id="cityautosuggestion"> <i class="input-group-addon fixed-w fa fa-map-marker"></i>
               <?php if($signupautosuggestion){ ?>
@@ -528,7 +528,7 @@ wp_enqueue_script('service-finder-crop');
         <div class="col-lg-6">
           <div class="form-group">
             <label>
-            <?php esc_html_e('State', 'service-finder'); ?>
+            <?php esc_html_e('Województwo', 'service-finder'); ?>
             </label>
             <div class="input-group"> <i class="input-group-addon fixed-w fa fa-map-marker"></i>
               <input type="text" class="form-control sf-form-control" name="state" id="state" value="<?php echo esc_attr($userInfo['state']) ?>">
@@ -538,14 +538,14 @@ wp_enqueue_script('service-finder-crop');
         <div class="col-lg-6">
           <div class="form-group">
             <label>
-            <?php esc_html_e('Postal Code', 'service-finder'); ?>
+            <?php esc_html_e('Kod pocztowy', 'service-finder'); ?>
             </label>
             <div class="input-group"> <i class="input-group-addon fixed-w fa fa-map-marker"></i>
               <input type="text" class="form-control sf-form-control" name="zipcode" id="zipcode" value="<?php echo esc_attr($userInfo['zipcode']) ?>">
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <!-- <div class="col-lg-6">
           <div class="form-group">
             <label>
             <?php esc_html_e('Country', 'service-finder'); ?>
@@ -587,8 +587,8 @@ wp_enqueue_script('service-finder-crop');
             </select>
             </div>
           </div>
-        </div>
-        <div class="col-lg-6">
+        </div> -->
+        <!-- <div class="col-lg-6">
           <div class="form-group">
             <label>
             <?php esc_html_e('Latitude', 'service-finder'); ?>
@@ -607,7 +607,7 @@ wp_enqueue_script('service-finder-crop');
               <input type="text" class="form-control sf-form-control" name="long" id="long" value="<?php echo esc_attr($userInfo['long']) ?>">
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -678,7 +678,7 @@ wp_enqueue_script('service-finder-crop');
   </div>
   <?php } ?>
   <!--Social Media Section-->
-  <div class="panel panel-default social-media-here">
+  <!-- <div class="panel panel-default social-media-here">
     <div class="panel-heading sf-panel-heading">
       <h3 class="panel-tittle m-a0"><span class="fa fa-share-alt"></span> <?php esc_html_e('Social Media', 'service-finder'); ?> </h3>
     </div>
@@ -746,7 +746,7 @@ wp_enqueue_script('service-finder-crop');
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!--Password Update Section-->
   <div class="panel panel-default password-update">
     <div class="panel-heading sf-panel-heading">
@@ -1126,7 +1126,7 @@ wp_enqueue_script('service-finder-crop');
     </div>
   </div>
   <!--Amenities Select Section-->
-  <?php if(!empty($showamenities)){ ?>
+  <!-- <?php if(!empty($showamenities)){ ?>
   <div class="panel panel-default category-drop">
     <div class="panel-heading sf-panel-heading">
       <h3 class="panel-tittle m-a0"><span class="fa fa-shield"></span> <?php esc_html_e('Amenities', 'service-finder'); ?> </h3>
@@ -1203,9 +1203,9 @@ wp_enqueue_script('service-finder-crop');
       </div>
     </div>
   </div>
-  <?php } ?>
+  <?php } ?> -->
   <!--Languages Select Section-->
-  <?php if(!empty($showlanguages)){ ?>
+  <!-- <?php if(!empty($showlanguages)){ ?>
   <div class="panel panel-default category-drop">
     <div class="panel-heading sf-panel-heading">
       <h3 class="panel-tittle m-a0"><span class="fa fa-language"></span> <?php esc_html_e('Languages', 'service-finder'); ?> </h3>
@@ -1252,7 +1252,7 @@ wp_enqueue_script('service-finder-crop');
   </div>
   <?php } ?>
   <!--Add cover image Section-->
-  <?php 
+  <!-- <?php 
   if(!empty($userCap)):
   if(in_array('cover-image',$userCap)):
   ?>
@@ -1320,9 +1320,9 @@ wp_enqueue_script('service-finder-crop');
   <?php 
   endif;
   endif;
-  ?>
+  ?> -->
   <!--Gallery Images Section-->
-  <div class="panel panel-default gallery-images">
+  <!-- <div class="panel panel-default gallery-images">
     <div class="panel-heading sf-panel-heading">
       <h3 class="panel-tittle m-a0"><span class="fa fa-file-image-o"></span> <?php esc_html_e('Gallery Images', 'service-finder'); ?> </h3>
     </div>
@@ -1393,9 +1393,9 @@ wp_enqueue_script('service-finder-crop');
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!--Attachments Section-->
-  <div class="panel panel-default attachment-files">
+  <!-- <div class="panel panel-default attachment-files">
     <div class="panel-heading sf-panel-heading">
       <h3 class="panel-tittle m-a0"><span class="fa fa-paperclip"></span> <?php esc_html_e('Attachments', 'service-finder'); ?> </h3>
     </div>
@@ -1448,9 +1448,9 @@ wp_enqueue_script('service-finder-crop');
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!--Embedded Code Section-->
-  <div class="panel panel-default embeded-code">
+  <!-- <div class="panel panel-default embeded-code">
     <div class="panel-heading sf-panel-heading">
       <h3 class="panel-tittle m-a0"><span class="fa fa-code"></span> <?php esc_html_e('Embeded Code', 'service-finder'); ?> </h3>
     </div>
@@ -1504,5 +1504,5 @@ wp_enqueue_script('service-finder-crop');
       <input type="hidden" name="locationzoomlevel" id="locationzoomlevel" value="<?php echo get_user_meta($globalproviderid,'locationzoomlevel',true); ?>" />
       <input type="hidden" name="user_id" value="<?php echo esc_attr($globalproviderid); ?>" />
     </div>
-  </form>
+  </form> -->
 

@@ -194,11 +194,6 @@ $socialloginclass = 'sf-other-login-one';
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input name="signup_user_name" type="text" class="form-control" placeholder="<?php esc_html_e('Nazwa użytkownika', 'service-finder'); ?>">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
                       <input name="signup_user_email" id="signup_user_email" type="text" class="form-control" placeholder="<?php esc_html_e('Email', 'service-finder'); ?>">
                     </div>
                   </div>
@@ -216,6 +211,12 @@ $socialloginclass = 'sf-other-login-one';
                         </a> </div>
                     </div>
                     <?php } ?>
+                  <?php 
+				  if(class_exists('aonesms'))
+				  {
+					echo do_shortcode('[aonesms_otp_custom_signup_form]');
+				  }
+				  ?>  
                   <div class="col-md-6">
                     <div class="form-group">
                       <input name="signup_password" id="password" type="password" class="form-control" placeholder="<?php esc_html_e('Hasło', 'service-finder'); ?>">
@@ -237,6 +238,9 @@ $socialloginclass = 'sf-other-login-one';
                       <input type="text" class="form-control" name="signup_address" id="signup_address" placeholder="<?php esc_html_e('Adres', 'service-finder'); ?>">
                     </div>
                   </div>
+                  <?php
+                  $signup_user_name = $signup_phone;
+                  ?>
                   <div class="col-md-6">
                     <div class="form-group has-select">
                       <?php
@@ -671,6 +675,7 @@ $socialloginclass = 'sf-other-login-one';
                   }
 				  ?>
                   <div class="col-md-12">
+                  	<input id="phoneverification" name="phoneverification" value="" type="hidden">
                     <input type="hidden" name="freemode" id="freemode" value="<?php echo ($free || $withoutpackage) ? 'yes' : 'no';?>" />
                     <input type="hidden" name="signup_user_role" value="<?php echo esc_attr($service_finder_ThemeParams['role']['provider']); ?>" />
                     <input type="hidden" name="userregister" value="signup">

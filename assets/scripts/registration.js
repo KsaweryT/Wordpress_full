@@ -789,7 +789,7 @@
 				signup_user_name: {
 
 					validators: {
-
+						digits: {message: param.only_digits},
 						notEmpty: {
 
 							message: param.signup_user_name
@@ -821,7 +821,13 @@
 					validators: {
 
 						digits: {message: param.only_digits},
-
+						remote: {
+							type: 'POST',
+							url: ajaxurl,
+							data: {
+								action: 'signupvalidate'
+							}
+						}
 					}
 
 	            },
@@ -2385,7 +2391,7 @@
             fields: {
 
 				signup_user_name: {
-
+					digits: {message: param.only_digits},
 					validators: {
 
 						notEmpty: {
